@@ -1,13 +1,33 @@
 import requests
+import argparse
 
-input_directory = str(input("Enter the wordlist path: "))
-input_domain = str(input("Enter the domain name: "))
+parser = argparse.ArgumentParser(description="Argument for directory enumeration")
 
-directory = open(input_directory).read()
+parser.add_argument(
+    '-d',
+    '--domain',
+    required=True,
+    help="domain name"
+
+)
+
+parser.add_argument(
+    '-w',
+    '--wordlist',
+    required=True,
+    help="for wordlist"
+)
+
+parse = parser.parse_args()
+wordlist_arg = parse.wordlist
+domain_arg = parse.domain
+
+
+directory = open(wordlist_arg).read()
 directories = directory.splitlines()
 
 for dir in directories:
-    urlpath = f"http://{input_domain}/{dir}"
+    urlpath = f"http://{domain_arg}/{dir}"
     try:
         r = requests.get(urlpath)
         if r.status_code == 200:
