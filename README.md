@@ -1,0 +1,2 @@
+# Python for Automation and Security
+This repository contains a collection of Python-based penetration testing and cybersecurity tools that I developed to strengthen my Python programming skills through real-world applications. The project includes different scripts and utilities focused on networking, security testing, automation, and ethical hacking concepts. By building these tools, I aimed to improve my understanding of cybersecurity practices, problem-solving, and practical software development while gaining hands-on experience with Python in real-world scenarios.
