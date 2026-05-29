@@ -5,7 +5,7 @@ def load_wordlists(wordlist_path):
     common_passwords = []
     try:
         with open(wordlist_path,'r') as f:
-            for password in f.read():
+            for password in f:
                 common_passwords.append(password.strip())
     except FileNotFoundError:
         print("The wordlist not found!")
@@ -42,7 +42,7 @@ def score_password(password, wordlists):
     
     if password in wordlists:
         score = 0
-        feedback = ["The password is already in common password list please use another passowrds"]
+        feedback = ["The password is already in common password list please use another passowrd"]
     
     return score, feedback
 
