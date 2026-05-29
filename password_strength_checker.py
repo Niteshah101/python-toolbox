@@ -62,7 +62,7 @@ def main():
         score, feedback = score_password(user_pass, password_list)
         if score == 5:
             print(f"Your password is: {score_label.get(score, 'very poor')} and score is: {score/5}")
-        elif score < 5:
+        else:
             print(f"Your password is: {score_label.get(score, 'very poor')} and score is: {score/5}")
             print("Here is the Feedback:")
             for tip in feedback:
