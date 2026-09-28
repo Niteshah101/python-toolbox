@@ -62,8 +62,8 @@ def main():
         score, feedback = score_password(user_pass, password_list)
         
         print(f"Your password is: {score_label.get(score, 'very poor')} and score is: {score/5}")
-        print("Here is the Feedback:")
         if score != 5:
+            print("Here is the Feedback:")
             for f in feedback:
                 print(f"- {f}")
 if __name__ == "__main__":
